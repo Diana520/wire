@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<tbody>
+<tr th:if="${wires.empty}">
+    <td colspan="2"> No Books Available</td>
+</tr>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mt-5 mb-5">
+<table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>ltg</th>
+        <th>changeNumber</th>
+        <th>oldLength</th>
+        <th>currentLength</th>
+        <th>newLength</th>
+        <th>oldZuschnitt</th>
+        <th>newZuschnitt</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="wire : ${wires}">
+        <td><span th:text="${wire.ltg}"> ltg </span></td>
+        <td><span th:text="${wire.changeNumber}"> changeNumber </span></td>
+        <td><span th:text="${wire.oldLength}"> oldLength </span></td>
+        <td><span th:text="${wire.currentLength}"> currentLength </span></td>
+        <td><span th:text="${wire.newLength}"> newLength </span></td>
+        <td><span th:text="${wire.oldZuschnitt}"> oldZuschnitt </span></td>
+        <td><span th:text="${wire.newZuschnitt}"> newZuschnitt </span></td>
+        <br/>
+    </tr>
+    </tbody>
+</table>
+        </div>
+    </div>
+</div>
+</tbody>
+</html>
